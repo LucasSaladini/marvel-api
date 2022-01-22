@@ -20,6 +20,22 @@ const displayData = async () => {
     allComics.map(comicSingle => {
         comic.push({title: comicSingle.title, pages: comicSingle.pageCount, series: comicSingle.series.name, image: comicSingle.thumbnail.path + '.' + comicSingle.thumbnail.extension})
     })
+
+    var comicBoxes = document.querySelector('.comic-boxes')
+    comicBoxes.innerHTML = ''
+
+    comic.map((val) => {
+        comicBoxes.innerHTML += `
+            <div class="comic-box">
+                <img src="${val.image}" alt="${val.title}">
+                <div class="comic-info">
+                    <h3>Título: </h3><span>${val.title}</span>
+                    <h3>Número de páginas: </h3><span>${val.pages}</span>
+                    <h3>Serie: </h3><span>${val.series}</span>
+                </div>
+            </div>
+        `
+    })
     console.log(allComics)
     // console.log(comic);
     // console.log(comics.data.results.map(comic => comic.title))
