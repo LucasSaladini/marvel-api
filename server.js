@@ -36,7 +36,7 @@ const displayData = async () => {
             </div>
         `
     })
-    console.log(allComics)
+    // console.log(allComics)
     // console.log(comic);
     // console.log(comics.data.results.map(comic => comic.title))
 }
