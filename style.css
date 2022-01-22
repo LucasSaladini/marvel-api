@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(237, 29, 36, 1);
+}
+
+.main {
+    margin: 20px auto;
+    max-width: 1100px;
+    background: whitesmoke;
+    padding: 0 2%;
+    border-radius: 5px;
+}
+
+.main h1 {
+    text-align: center;
+    padding: 30px;
+    font-size: 45px;
+}
+
+.comic-boxes {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comic-box {
+    border-radius: 10px;
+    width: 29%;
+    margin: 20px 2%;
+    background: #C5C6D0;
+}
+
+.comic-box img {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .comic-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    .comic-box img {
+        max-width: 300px;
+    }
+}
