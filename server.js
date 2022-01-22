@@ -31,7 +31,7 @@ const displayData = async () => {
                 <div class="comic-info">
                     <h3>Título: </h3><span>${val.title}</span>
                     <h3>Número de páginas: </h3><span>${val.pages}</span>
-                    <h3>Serie: </h3><span>${val.series}</span>
+                    <h3 class="last">Serie: </h3><span class="last">${val.series}</span>
                 </div>
             </div>
         `

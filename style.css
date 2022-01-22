@@ -45,6 +45,11 @@ body {
     margin-top: 5%;
 }
 
+.last {
+    margin-top: -5%;
+    margin-bottom: 10%;
+}
+
 .comic-box img {
     width: 100%;
     border-radius: 5px 5px 0 0;
