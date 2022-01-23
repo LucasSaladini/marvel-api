@@ -21,6 +21,31 @@ body {
     height: auto;
 }
 
+#quantity {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    background: red;
+    color: white;
+    border: none;
+}
+
+#quantity::placeholder {
+    color: white;
+}
+
+#quantity::-webkit-inner-spin-button, #quantity::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#quantity:focus {
+    outline: none;
+}
+
 .main h1 {
     text-align: center;
     padding: 30px;
