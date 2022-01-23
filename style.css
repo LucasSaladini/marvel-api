@@ -11,9 +11,14 @@ body {
 .main {
     margin: 20px auto;
     max-width: 1100px;
-    background: whitesmoke;
+    background: white;
     padding: 0 2%;
     border-radius: 5px;
+}
+
+.cta img {
+    width: 100%;
+    height: auto;
 }
 
 .main h1 {
