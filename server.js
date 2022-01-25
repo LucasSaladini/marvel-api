@@ -3,22 +3,32 @@ import MD5 from './md5Hash.js'
 const ts = Date.now().toString()
 const hash = MD5(ts + '62c84ea104d7196e6ad03c9355431319e1268dda' + '4b542631a0404e1d6bf11e45dea5917c')
 
-async function fetchData() {
+const comicsQuantity = document.querySelector('#quantity')
+comicsQuantity.addEventListener('keyup', () => {
+    displayData(comicsQuantity.value)
+    console.log(comicsQuantity.value);
+})
+
+async function fetchData(comicsQuantity) {
     try {
-        const request = await fetch(`http://gateway.marvel.com/v1/public/comics?ts=${ts}&apikey=4b542631a0404e1d6bf11e45dea5917c&hash=${hash}`)
+        const request = await fetch(`http://gateway.marvel.com/v1/public/comics?limit=${comicsQuantity}&ts=${ts}&apikey=4b542631a0404e1d6bf11e45dea5917c&hash=${hash}`)
         const data = await request.json()
+        // console.log(data);
         return data
     } catch (err) {
         console.log(err);
     }
 }
 
-const displayData = async () => {
-    const comics = await fetchData()
+const displayData = async (comicsQuantity) => {
+    const comics = await fetchData(comicsQuantity)
+    console.log(comics);
     var comic = []
     const allComics = comics.data.results
     allComics.map(comicSingle => {
-        comic.push({title: comicSingle.title, pages: comicSingle.pageCount, series: comicSingle.series.name, image: comicSingle.thumbnail.path + '.' + comicSingle.thumbnail.extension})
+        comic.push({title: comicSingle.title, pages: comicSingle.pageCount, 
+            series: comicSingle.series.name, 
+            image: comicSingle.thumbnail.path + '.' + comicSingle.thumbnail.extension})
     })
 
     var comicBoxes = document.querySelector('.comic-boxes')
@@ -40,5 +50,3 @@ const displayData = async () => {
     // console.log(comic);
     // console.log(comics.data.results.map(comic => comic.title))
 }
-
-displayData()
