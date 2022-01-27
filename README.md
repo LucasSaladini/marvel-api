@@ -1,6 +1,6 @@
 # marvel-api
 
-# English
+# English 🇺🇸
 The <b>Marvel API</b> is a project that uses the API supplied by Marvel to fetch data about their comics since 1960.
 
 In this first version of the project it's simply fetching all the comics based on the updates provided by Marvel, in a chronological way, starting by the latest realease until the
@@ -15,7 +15,7 @@ TO IMPLEMENT
 - [ ] Add input field to fetch comics based on hero
 
 
-# Português
+# Português 🇧🇷
 A <b>Marvel API</b> é um projeto que usa a API fornecida pela Marvel para pegar os dados referentes aos seus quadrinhos desde 1960.
 
 Nesta primeira versão do projeto estamos simplesmente pegando todos os quadrinhos com base nas atualizações fornecidas pela Marvel, de forma cronológica, começando a partir do
