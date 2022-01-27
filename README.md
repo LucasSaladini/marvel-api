@@ -11,7 +11,6 @@ Saying that, an input field was added to fetch from 1 to 100 comics and display 
 TO IMPLEMENT
 
 - [ ] Add input field to fetch comics based on year
-
 - [ ] Add input field to fetch comics based on hero
 
 
